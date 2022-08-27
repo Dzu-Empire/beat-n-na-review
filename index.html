@@ -15,8 +15,8 @@
       margin: 0;
       outline: none;
       border: none;
-      /* width: 100%;
-      height: 100%; */
+      width: 100%;
+      height: 100%;
       overflow: hidden;
     }
 
@@ -51,23 +51,6 @@
       mask-position: -794px 40%;
     }
     /* @media only screen and (orientation:portrait) {
-      body {
-        height: 100vw;
-        width: 100vh;
-        transform: translate(-50%, -50%) rotate(90deg);
-        top: 50vh;
-        left: 50vw;
-        position: fixed;
-      }
-
-      canvas {
-        height: 100vw;
-        width: 100vh;
-      }
-    }
-
-    @media only screen and (orientation:landscape) {
-
       *,
       html,
       body {
@@ -84,10 +67,23 @@
         height: 100vh;
         width: 100vw;
       }
+    }
+
+    @media only screen and (orientation:landscape) {
+      body {
+        height: 100vw;
+        width: 100vh;
+        transform: translate(-50%, -50%) rotate(90deg);
+        top: 50vh;
+        left: 50vw;
+        position: fixed;
+      }
+
+      canvas {
+        height: 100vw;
+        width: 100vh;
+      }
     } */
-  </style>
-  <meta name="viewport"
-    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
   </style>
 
 </head>
@@ -114,16 +110,15 @@
   <!-- <script src="TemplateData/web3.min.js"></script> -->
   <script src="Build/build.loader.js"></script>
   <script>
-    window.LANDSCAPE_MODE = true
     createUnityInstance(document.querySelector("#unity-canvas"), {
-      dataUrl: "Build/3d591a9f3259aaf5bab16d35e119060d.data",
-      frameworkUrl: "Build/747271f05151f3a5738b81aa41b2f7b7.js",
-      codeUrl: "Build/e5273f2ebe6e6102db3ec641b7aba671.wasm",
+      dataUrl: "Build/019d5282ff80ba56ff6ec1803e58ca5b.data",
+      frameworkUrl: "Build/3d6ad2057309dae853c2204b1e22aac0.js",
+      codeUrl: "Build/496f3699e876af979d0e8343c83c1fbb.wasm",
         streamingAssetsUrl: "StreamingAssets",
-      companyName: "DefaultCompany",
+      companyName: "Dzu Empire",
       productName: "Beat-Ninja",
-      productVersion: "1.0",
-      matchWebGLToCanvasSize: false,
+      productVersion: "0.0.1",
+      matchWebGLToCanvasSize: true,
       devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
     }, (progress) => {
       let fill = document.getElementById("loading-fill")
